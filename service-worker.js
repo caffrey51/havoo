@@ -1,1 +1,8 @@
-const CACHE='havoo-v13';const ASSETS=['./','./index.html','./havoo-v8.css?v=13','./havoo-v8.js?v=13','./assets/family-strip-v12.jpg?v=13','./manifest.webmanifest?v=13','./icon.svg?v=13'];self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)))});self.addEventListener('activate',e=>e.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))),self.clients.claim()])));self.addEventListener('fetch',e=>{if(e.request.mode==='navigate'){e.respondWith(fetch(e.request).catch(()=>caches.match('./index.html')));return}if(e.request.method!=='GET')return;e.respondWith(caches.match(e.request).then(c=>c||fetch(e.request).then(r=>{if(r&&r.ok){const copy=r.clone();caches.open(CACHE).then(x=>x.put(e.request,copy))}return r})))})
+self.addEventListener('install',()=>self.skipWaiting());
+self.addEventListener('activate',event=>event.waitUntil((async()=>{
+  const keys=await caches.keys();
+  await Promise.all(keys.map(k=>caches.delete(k)));
+  await self.registration.unregister();
+  const clientsList=await self.clients.matchAll({type:'window'});
+  for(const client of clientsList) client.navigate(client.url);
+})()));
