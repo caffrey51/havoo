@@ -72,3 +72,39 @@
   .family-exact{height:116px!important}
   .family-exact img{max-height:116px!important;max-width:100%!important}
 }
+
+
+/* Simple family initials */
+.family-initials{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:16px!important;
+  min-width:0!important;
+  overflow:visible!important;
+}
+.family-initial{
+  width:88px!important;
+  height:88px!important;
+  border-radius:50%!important;
+  display:grid!important;
+  place-items:center!important;
+  color:#fff!important;
+  font-size:36px!important;
+  font-weight:900!important;
+  line-height:1!important;
+  box-shadow:0 0 0 4px rgba(255,255,255,.92),0 8px 22px rgba(0,0,0,.25)!important;
+  text-shadow:0 2px 8px rgba(0,0,0,.18)!important;
+}
+.family-hugues{background:#1688ff!important}
+.family-caro{background:#ff4291!important}
+.family-sacha{background:#20b969!important}
+.family-jules{background:#f39a1f!important}
+@media(max-width:1200px) and (orientation:landscape){
+  .family-initials{gap:10px!important}
+  .family-initial{
+    width:62px!important;
+    height:62px!important;
+    font-size:28px!important;
+  }
+}
