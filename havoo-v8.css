@@ -13,3 +13,33 @@
   .family{height:112px!important}
   .family-strip{width:100%!important;height:112px!important;max-height:112px!important;object-fit:contain!important}
 }
+
+
+/* HAVOO V13 - exact approved lions, four independent avatars */
+.family-v13{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(72px,1fr))!important;
+  gap:10px!important;
+  align-items:center!important;
+  justify-items:center!important;
+  height:100%!important;
+  overflow:visible!important;
+}
+.family-v13 .family-person{
+  width:100%!important;
+  max-width:150px!important;
+  aspect-ratio:158/221!important;
+  background-image:url('assets/family-strip-v12.jpg?v=13')!important;
+  background-repeat:no-repeat!important;
+  background-size:400% 100%!important;
+  border-radius:0!important;
+  filter:drop-shadow(0 7px 16px rgba(0,0,0,.22));
+}
+.family-v13 .fp-hugues{background-position:0% 0%!important}
+.family-v13 .fp-caro{background-position:33.333% 0%!important}
+.family-v13 .fp-sacha{background-position:66.666% 0%!important}
+.family-v13 .fp-jules{background-position:100% 0%!important}
+@media(max-width:1200px) and (orientation:landscape){
+  .family-v13{grid-template-columns:repeat(4,72px)!important;gap:4px!important;justify-content:center!important}
+  .family-v13 .family-person{width:72px!important;max-width:72px!important}
+}
