@@ -108,3 +108,16 @@
     font-size:28px!important;
   }
 }
+
+/* Lion portraits inside the four circles - keep the working circle layout */
+.family-initial.lion-avatar{
+  background-image:url('assets/family-strip.png')!important;
+  background-repeat:no-repeat!important;
+  background-size:400% auto!important;
+  background-color:transparent!important;
+  overflow:hidden!important;
+}
+.family-hugues.lion-avatar{background-position:0% 0%!important}
+.family-caro.lion-avatar{background-position:33.333% 0%!important}
+.family-sacha.lion-avatar{background-position:66.666% 0%!important}
+.family-jules.lion-avatar{background-position:100% 0%!important}
