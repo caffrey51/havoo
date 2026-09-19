@@ -1,11 +1,11 @@
 {
-  "name": "HAVOO — La maison, ensemble",
+  "name": "HAVOO",
   "short_name": "HAVOO",
   "description": "Le tableau de bord familial HAVOO.",
   "start_url": "./",
   "scope": "./",
-  "display": "standalone",
-  "orientation": "any",
+  "display": "fullscreen",
+  "orientation": "landscape",
   "background_color": "#f6efe7",
   "theme_color": "#f6efe7",
   "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
