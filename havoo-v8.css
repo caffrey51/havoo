@@ -4,3 +4,12 @@
 .family{display:flex!important;align-items:center!important;justify-content:center!important;overflow:visible!important}
 .family-strip{display:block;width:min(100%,630px);height:auto;max-height:150px;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(0,0,0,.18))}
 @media(max-width:1200px) and (orientation:landscape){.family-strip{max-height:100px;width:min(100%,480px)}}
+
+
+/* HAVOO V12c - family strip sizing fix */
+.family{height:100%;min-width:0;overflow:visible!important}
+.family-strip{width:100%!important;max-width:630px!important;height:100%!important;max-height:150px!important;object-fit:contain!important;object-position:center center!important}
+@media(max-width:1200px) and (orientation:landscape){
+  .family{height:112px!important}
+  .family-strip{width:100%!important;height:112px!important;max-height:112px!important;object-fit:contain!important}
+}
