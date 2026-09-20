@@ -96,10 +96,10 @@
   box-shadow:0 0 0 4px rgba(255,255,255,.92),0 8px 22px rgba(0,0,0,.25)!important;
   text-shadow:0 2px 8px rgba(0,0,0,.18)!important;
 }
-.family-hugues{background:#1688ff!important}
-.family-caro{background:#ff4291!important}
-.family-sacha{background:#20b969!important}
-.family-jules{background:#f39a1f!important}
+.family-hugues{--avatar-color:#1688ff;background:#1688ff!important}
+.family-caro{--avatar-color:#ff4291;background:#ff4291!important}
+.family-sacha{--avatar-color:#20b969;background:#20b969!important}
+.family-jules{--avatar-color:#f39a1f;background:#f39a1f!important}
 @media(max-width:1200px) and (orientation:landscape){
   .family-initials{gap:10px!important}
   .family-initial{
@@ -112,6 +112,11 @@
 /* Four independent family portraits. Each valid PNG is clipped by its circle. */
 .family-initial.lion-avatar{
   padding:0!important;
+  height:auto!important;
+  aspect-ratio:1 / 1!important;
+  flex:0 0 88px!important;
+  align-self:center!important;
+  border:3px solid var(--avatar-color)!important;
   background-color:transparent!important;
   overflow:hidden!important;
 }
@@ -121,4 +126,9 @@
   height:100%!important;
   object-fit:cover!important;
   border-radius:50%!important;
+}
+@media(max-width:1200px) and (orientation:landscape){
+  .family-initial.lion-avatar{
+    flex-basis:62px!important;
+  }
 }
