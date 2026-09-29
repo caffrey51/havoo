@@ -161,3 +161,20 @@
     font-size:9px!important;
   }
 }
+
+
+/* Fix avatar ring offset: the PNG files already contain their own colored circles. */
+.family-initial.lion-avatar{
+  border:none!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+  background:transparent!important;
+}
+.family-initial.lion-avatar img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  border-radius:0!important;
+}
