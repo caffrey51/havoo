@@ -178,3 +178,20 @@
   object-position:center center!important;
   border-radius:0!important;
 }
+
+
+/* Clip the square PNG canvas to the avatar circle, without adding a second ring */
+.family-initial.lion-avatar{
+  border:none!important;
+  border-radius:50%!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+  background:transparent!important;
+}
+.family-initial.lion-avatar img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  border-radius:50%!important;
+}
