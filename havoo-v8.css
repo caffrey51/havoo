@@ -195,3 +195,42 @@
   object-position:center center!important;
   border-radius:50%!important;
 }
+
+
+/* Final family medallions: hard circular crop of each independent portrait */
+.family-profile .family-initial.lion-avatar{
+  width:88px!important;
+  height:88px!important;
+  flex:0 0 88px!important;
+  aspect-ratio:1/1!important;
+  padding:0!important;
+  margin:0!important;
+  border:0!important;
+  border-radius:50%!important;
+  clip-path:circle(50% at 50% 50%)!important;
+  -webkit-clip-path:circle(50% at 50% 50%)!important;
+  overflow:hidden!important;
+  background:none!important;
+  box-shadow:none!important;
+}
+.family-profile .family-initial.lion-avatar>img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  object-fit:cover!important;
+  object-position:50% 50%!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:50%!important;
+  clip-path:circle(50% at 50% 50%)!important;
+  -webkit-clip-path:circle(50% at 50% 50%)!important;
+}
+@media(max-width:1200px) and (orientation:landscape){
+  .family-profile .family-initial.lion-avatar{
+    width:62px!important;
+    height:62px!important;
+    flex-basis:62px!important;
+  }
+}
